@@ -246,5 +246,10 @@ section:not(#hero-banner) {
     #hero-banner, #manutencao::before, #fatores-humanos::before {
         background-attachment: scroll;
     }
+    /* Deixa as imagens de fundo mais visíveis no celular */
+#manutencao::before,
+#fatores-humanos::before {
+    background-image: linear-gradient(rgba(10, 15, 24, 0.6), rgba(10, 15, 24, 0.8));
+}
 }
 footer { text-align: center; padding: 2.5rem 0; background: var(--background-dark); color: #888; }
