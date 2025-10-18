@@ -168,60 +168,20 @@ section:not(#hero-banner) {
 /* --- REGRAS PARA CELULAR (DESIGN RESPONSIVO) --- */
 /* ======================================================= */
 @media (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Empilha o logo e o menu */
-        gap: 15px;
-    }
-
-    header {
-        height: auto; /* Altura automática para caber os itens */
-        padding: 1rem 0;
-    }
-    
-    main {
-        padding-top: 120px; /* Aumenta o espaço para o novo header */
-    }
-
-    .hero-content h3 {
-        font-size: 2.5rem; /* Reduz o título principal */
-    }
-
-    .hero-content p {
-        font-size: 1rem; /* Reduz o parágrafo */
-    }
-
-    section {
-        padding: 3rem 1rem; /* Reduz o espaçamento das seções */
-    }
-
-    section h2 {
-        font-size: 1.8rem; /* Reduz os títulos das seções */
-    }
-
-    .pilares-container {
-        grid-template-columns: 1fr; /* Força os pilares a ficarem em uma única coluna */
-    }
-
-    /* Remove o efeito parallax em celulares, pois pode causar problemas de performance */
-    #hero-banner, #manutencao::before, #fatores-humanos::before {
-       /* ======================================================= */
-/* --- REGRAS PARA CELULAR (DESIGN RESPONSIVO) --- */
-/* ======================================================= */
-@media (max-width: 768px) {
 
     /* --- Navegação Aprimorada --- */
     nav {
-        padding: 0 1rem; /* Menos espaço nas laterais */
+        padding: 0 1rem;
     }
 
     nav .logo {
-        font-size: 1.4rem; /* Diminui um pouco o logo */
-        margin-bottom: 10px; /* Espaço abaixo do logo */
+        font-size: 1.4rem;
+        margin-bottom: 10px;
     }
     
     nav ul {
-        justify-content: center; /* Centraliza os links */
-        flex-wrap: wrap; /* Permite que os links quebrem a linha se necessário */
+        justify-content: center;
+        flex-wrap: wrap;
         gap: 15px;
     }
 
@@ -235,31 +195,49 @@ section:not(#hero-banner) {
     }
     
     main {
-        padding-top: 130px; /* Ajusta o espaço para o header maior */
+        padding-top: 130px;
     }
 
     /* --- Tipografia e Conteúdo --- */
     .hero-content h3 {
-        font-size: 2.8rem; /* Título principal um pouco maior e mais impactante */
+        font-size: 2.8rem;
         line-height: 1.2;
     }
 
     .hero-content p {
-        font-size: 1.1rem; /* Parágrafo mais legível */
+        font-size: 1.1rem;
     }
 
     section {
-        padding: 3rem 1.5rem; /* Mais espaço lateral para o texto "respirar" */
+        padding: 3rem 1.5rem;
     }
 
     section h2 {
-        font-size: 2rem; /* Títulos de seção com mais destaque */
+        font-size: 2rem;
     }
 
     .pilares-container {
         grid-template-columns: 1fr;
     }
 
+    /* --- Efeitos Visuais --- */
+    /* Remove o efeito parallax em telemóveis */
+    #hero-banner, #manutencao::before, #fatores-humanos::before {
+        background-attachment: scroll;
+    }
+
+    /* NOVO CÓDIGO AQUI: Ajusta as imagens de fundo para serem totalmente visíveis */
+    #manutencao::before,
+    #fatores-humanos::before {
+        background-size: contain; /* Garante que a imagem inteira seja visível */
+        background-repeat: no-repeat; /* Evita que a imagem se repita */
+    }
+
+    /* --- Rodapé --- */
+    footer {
+        font-size: 0.9rem;
+    }
+}
     /* --- Efeitos Visuais --- */
     /* Remove o efeito parallax em celulares, que pode causar lentidão */
     #hero-banner, #manutencao::before, #fatores-humanos::before {
