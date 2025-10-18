@@ -159,7 +159,7 @@ section:not(#hero-banner) {
     height: 100%;
   background-image: linear-gradient(rgba(10, 15, 24, 0.85), rgba(10, 15, 24, 0.95)), url('nova-equipe-emca.jpeg');
     background-size: cover;
-    background-position: center;
+   background-position: 80% center; /* Ajusta o foco para a direita, mostrando mais o homem de costas */
     background-attachment: fixed; /* Efeito Parallax */
     z-index: -1;
     border-radius: 8px; /* Opcional: para bordas arredondadas */
