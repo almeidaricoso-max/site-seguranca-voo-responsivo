@@ -264,6 +264,12 @@ section:not(#hero-banner) {
     /* Remove o efeito parallax em celulares, que pode causar lentidão */
     #hero-banner, #manutencao::before, #fatores-humanos::before {
         background-attachment: scroll;
+        /* Ajusta as imagens de fundo para serem totalmente visíveis no telemóvel */
+    #manutencao::before,
+    #fatores-humanos::before {
+        background-size: contain; /* Garante que a imagem inteira seja visível */
+        background-repeat: no-repeat; /* Evita que a imagem se repita no espaço vazio */
+    }
     }
 
     /* --- Rodapé --- */
