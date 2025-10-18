@@ -204,52 +204,71 @@ section:not(#hero-banner) {
 
     /* Remove o efeito parallax em celulares, pois pode causar problemas de performance */
     #hero-banner, #manutencao::before, #fatores-humanos::before {
-        /* ======================================================= */
+       /* ======================================================= */
 /* --- REGRAS PARA CELULAR (DESIGN RESPONSIVO) --- */
 /* ======================================================= */
 @media (max-width: 768px) {
+
+    /* --- Navegação Aprimorada --- */
     nav {
-        flex-direction: column; /* Empilha o logo e o menu */
+        padding: 0 1rem; /* Menos espaço nas laterais */
+    }
+
+    nav .logo {
+        font-size: 1.4rem; /* Diminui um pouco o logo */
+        margin-bottom: 10px; /* Espaço abaixo do logo */
+    }
+    
+    nav ul {
+        justify-content: center; /* Centraliza os links */
+        flex-wrap: wrap; /* Permite que os links quebrem a linha se necessário */
         gap: 15px;
     }
 
+    nav ul li {
+        margin-left: 0;
+    }
+
     header {
-        height: auto; /* Altura automática para caber os itens */
+        height: auto;
         padding: 1rem 0;
     }
     
     main {
-        padding-top: 120px; /* Aumenta o espaço para o novo header */
+        padding-top: 130px; /* Ajusta o espaço para o header maior */
     }
 
+    /* --- Tipografia e Conteúdo --- */
     .hero-content h3 {
-        font-size: 2.5rem; /* Reduz o título principal */
+        font-size: 2.8rem; /* Título principal um pouco maior e mais impactante */
+        line-height: 1.2;
     }
 
     .hero-content p {
-        font-size: 1rem; /* Reduz o parágrafo */
+        font-size: 1.1rem; /* Parágrafo mais legível */
     }
 
     section {
-        padding: 3rem 1rem; /* Reduz o espaçamento das seções */
+        padding: 3rem 1.5rem; /* Mais espaço lateral para o texto "respirar" */
     }
 
     section h2 {
-        font-size: 1.8rem; /* Reduz os títulos das seções */
+        font-size: 2rem; /* Títulos de seção com mais destaque */
     }
 
     .pilares-container {
-        grid-template-columns: 1fr; /* Força os pilares a ficarem em uma única coluna */
+        grid-template-columns: 1fr;
     }
 
-    /* Remove o efeito parallax em celulares, pois pode causar problemas de performance */
+    /* --- Efeitos Visuais --- */
+    /* Remove o efeito parallax em celulares, que pode causar lentidão */
     #hero-banner, #manutencao::before, #fatores-humanos::before {
         background-attachment: scroll;
     }
-    /* Deixa as imagens de fundo mais visíveis no celular */
-#manutencao::before,
-#fatores-humanos::before {
-    background-image: linear-gradient(rgba(10, 15, 24, 0.6), rgba(10, 15, 24, 0.8));
-}
+
+    /* --- Rodapé --- */
+    footer {
+        font-size: 0.9rem; /* Fonte do rodapé mais sutil */
+    }
 }
 footer { text-align: center; padding: 2.5rem 0; background: var(--background-dark); color: #888; }
