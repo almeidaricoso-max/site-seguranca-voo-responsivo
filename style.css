@@ -204,4 +204,47 @@ section:not(#hero-banner) {
 
     /* Remove o efeito parallax em celulares, pois pode causar problemas de performance */
     #hero-banner, #manutencao::before, #fatores-humanos::before {
+        /* ======================================================= */
+/* --- REGRAS PARA CELULAR (DESIGN RESPONSIVO) --- */
+/* ======================================================= */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Empilha o logo e o menu */
+        gap: 15px;
+    }
+
+    header {
+        height: auto; /* Altura automática para caber os itens */
+        padding: 1rem 0;
+    }
+    
+    main {
+        padding-top: 120px; /* Aumenta o espaço para o novo header */
+    }
+
+    .hero-content h3 {
+        font-size: 2.5rem; /* Reduz o título principal */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Reduz o parágrafo */
+    }
+
+    section {
+        padding: 3rem 1rem; /* Reduz o espaçamento das seções */
+    }
+
+    section h2 {
+        font-size: 1.8rem; /* Reduz os títulos das seções */
+    }
+
+    .pilares-container {
+        grid-template-columns: 1fr; /* Força os pilares a ficarem em uma única coluna */
+    }
+
+    /* Remove o efeito parallax em celulares, pois pode causar problemas de performance */
+    #hero-banner, #manutencao::before, #fatores-humanos::before {
+        background-attachment: scroll;
+    }
+}
 footer { text-align: center; padding: 2.5rem 0; background: var(--background-dark); color: #888; }
